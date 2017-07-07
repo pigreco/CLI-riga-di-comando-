@@ -1,0 +1,10 @@
+#!/bin/bash
+set -x
+
+#creo una cartella di output
+mkdir ./nomecartella
+
+for i in *.shp; 
+do 
+  ogr2ogr -a_srs "EPSG:3003" ./nomecartella/"$i" ./"$i"; 
+done
