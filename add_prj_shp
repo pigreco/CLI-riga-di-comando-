@@ -8,3 +8,7 @@ for i in *.shp;
 do 
   ogr2ogr -a_srs "EPSG:3003" ./nomecartella/"$i" ./"$i"; 
 done
+
+------ da shell OSGEO ----
+
+for %i in (*.shp) do gdalsrsinfo -o wkt_esri EPSG:3003 > %~ni.prj
