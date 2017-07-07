@@ -1,0 +1,3 @@
+ogr2ogr -f "DXF" {outFile} {inFile} -zfield {ColumnWithZValue}
+
+https://nathanw.net/2011/05/05/3d-dxf-using-ogr/
