@@ -1,0 +1,3 @@
+gdal_translate -of Gtiff -a_srs EPSG:32633 inputfile.ecw  outfile.tif
+
+video -https://www.youtube.com/watch?v=uuC8I-3LiRo
