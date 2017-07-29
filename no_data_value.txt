@@ -1,0 +1,1 @@
+gdal_translate -of GTiff -a_nodata none input.tif output.tif
