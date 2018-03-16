@@ -18,7 +18,7 @@ done <./sigla.csv;
 #ciclo per convertire da shp in dxf
 for i in ./nomecartellashp/*.shp; 
 do 
-  #crei una variabile che usi per estrarre nome e estensione
+  #crea una variabile che usi per estrarre nome e estensione
   filename=$(basename "$i")
   #estrai estensione
   extension="${filename##*.}"
