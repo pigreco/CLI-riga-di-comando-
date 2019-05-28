@@ -9,3 +9,6 @@ for i in $(find . -name '*.shp'); do
         ogr2ogr -f "ESRI Shapefile" -update -append $consolidated_file $i
     fi
 done
+
+
+https://www.varunpant.com/posts/merge-multiple-shapefiles-using-ogr2ogr-in-windows-linux-or-osx
