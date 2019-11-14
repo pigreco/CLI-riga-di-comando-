@@ -23,5 +23,5 @@ for i in ./out/*.shp; do
 done;
 
 # cancello cartella e file inutili
-rm ./out
+rmdir ./out
 rm ./reticolo2.csv
