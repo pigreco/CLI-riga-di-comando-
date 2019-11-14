@@ -10,11 +10,11 @@ mkdir -p ./output
 ogr2ogr -f CSV reticolo.csv reticolo.shp -sql "SELECT DISTINCT nome FROM reticolo"
 # crea un file reticolo2 togliendo intestazione
 cat reticolo.csv | tail -n+2 > ./reticolo2.csv
-# ciclo per splittare lo shapefile utilizzando il campo nome
+# cicla per splittare lo shapefile utilizzando il campo nome
 while read p; do
 	ogr2ogr -f "ESRI Shapefile" -where "nome ='$p'" ./out/$p.shp reticolo.shp;
 done < ./reticolo2.csv;
-# ciclo per ritagliare il raster e assegnare nomefile uguale all'attributo nome
+# cicla per ritagliare il raster e assegnare nomefile uguale all'attributo nome
 for i in ./out/*.shp; do
   filename=$(basename "$i")
   filename="${filename%.*}"
