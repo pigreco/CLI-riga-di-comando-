@@ -2,11 +2,11 @@
 
 set -x
 
-# creo due cartelle
-mkdir ./out
-mkdir ./output
+# crea due cartelle
+mkdir -p ./out
+mkdir -p ./output
 
-# converte lo shapefile reticolo in CSV con il solo attributo nome
+# converti lo shapefile reticolo in CSV con il solo attributo nome
 ogr2ogr -f CSV reticolo.csv reticolo.shp -sql "SELECT DISTINCT nome FROM reticolo"
 # crea un file reticolo2 togliendo intestazione
 cat reticolo.csv | tail -n+2 > ./reticolo2.csv
